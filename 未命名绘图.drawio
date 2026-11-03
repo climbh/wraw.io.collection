@@ -1,0 +1,125 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="第 1 页" id="Xxy3IqnlIZ61IzfDbF-v">
+    <mxGraphModel dx="2003" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1000" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1F2937;" value="小程序登录流程（完善版）" vertex="1">
+          <mxGeometry height="35" width="400" x="350" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e13;" value="开始" vertex="1">
+          <mxGeometry height="50" width="70" x="520" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="openid" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="获取 openId&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;调用小程序登录能力&lt;/font&gt;" vertex="1">
+          <mxGeometry height="65" width="150" x="480" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="query" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="查询手机号绑定状态&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;根据 openId 查询用户&lt;/font&gt;" vertex="1">
+          <mxGeometry height="65" width="190" x="460" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="bound" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" value="已绑定手机号？" vertex="1">
+          <mxGeometry height="90" width="160" x="475" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="login" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="登录接口&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;创建 / 更新登录态，签发 Token&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="455" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="phone" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" value="手机号验证页面&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;输入手机号及短信验证码&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="190" x="760" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="verify" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="校验短信验证码" vertex="1">
+          <mxGeometry height="60" width="190" x="760" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="verifyok" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" value="验证码正确？" vertex="1">
+          <mxGeometry height="90" width="160" x="775" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="bind" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="绑定手机号接口&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;将手机号关联到 openId 对应用户&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="190" x="760" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="success" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" value="登录成功&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;保存 Token，进入首页&lt;/font&gt;" vertex="1">
+          <mxGeometry height="65" width="180" x="465" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="loginfail" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" value="登录失败&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;提示原因，可重新登录&lt;/font&gt;" vertex="1">
+          <mxGeometry height="65" width="180" x="190" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="verifyfail" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" value="验证码错误 / 过期&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;提示后重新输入或重发&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="990" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="cancel" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" value="用户取消" vertex="1">
+          <mxGeometry height="55" width="120" x="990" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="openid" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="openid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="query" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="query" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="bound" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="bound" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontColor=#2D7600;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="login" value="是">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="bound" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontColor=#B20000;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="phone" value="否">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="698" y="435" />
+              <mxPoint x="698" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="phone" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="verify" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="verify" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="verifyok" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="verifyok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontColor=#2D7600;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="bind" value="是">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="verifyok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontColor=#B20000;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;verticalAlign=bottom;labelPlacement=auto;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="verifyfail" value="否">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="bind" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="login" value="绑定成功">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="708" y="885" />
+              <mxPoint x="708" y="805" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="login" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontColor=#2D7600;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="success" value="成功">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="login" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontColor=#B20000;strokeColor=#64748b;strokeWidth=2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="loginfail" value="失败">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="805" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="phone" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeColor=#b85450;labelBackgroundColor=default;defaultLabelBackgroundColor=page;labelPlacement=auto;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.39285714285714285;entryX=0;entryY=0.5;" target="cancel" value="取消">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
